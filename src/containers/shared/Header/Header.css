@@ -1,0 +1,30 @@
+.account, .no_say{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+@media only screen and (min-width:768px) and (max-width:1024px){
+    header{
+        position: absolute;
+        top:0px;
+        z-index:10;
+        left:0;
+    }
+  }
+  .mobile_nav{
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      width:320px;
+      max-width: 100%;
+      background-color: white;
+  }
+  .mobile_nav i {
+    position:absolute;
+    color:black;
+    font-size:1.4rem;
+    top:1rem;
+    right:1rem;
+    width:28px;
+   height:28px;
+  }
+  

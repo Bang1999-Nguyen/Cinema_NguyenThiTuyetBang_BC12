@@ -1,0 +1,147 @@
+.SignIn{
+  
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(245, 245, 220, 0.525);
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+.bg_login{
+    border-radius: 10px 0 0 10px;
+    background:linear-gradient(120deg, #CC3366 20%, #663366 100%);  
+    height:87vh;
+}
+.title_signIn{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:50%;
+    left: 0%;
+    transform: translate(8%, -50%);
+}
+.title_signIn h1{
+    color:'#fff'
+}
+.icon i{
+    margin-right:20px;
+    font-size: 20px;
+    color:black;
+    border-radius: 50%;
+    background-color: #fff;
+    height:50px;
+    width:50px;
+    line-height:50px;
+}
+.SignIn input{
+    padding:12px 170px 12px 20px;
+    outline: none;
+    font-size: 14px;
+}
+.SignIn{
+    width:60%;
+    height:87vh;
+    position:fixed
+}
+.input_login{
+    height:87vh
+}
+.welcome_login{
+    font-size: 35px;
+}
+.wave{
+    font-size:16px;
+    width: 270px 
+}
+.input_login__sub{
+    display:none
+}
+.input_login{
+    width:60%;
+    
+}
+.input__login{
+    margin-top: 5px;
+}
+.input_login h1{
+    font-size:28px;
+}
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .login_page .SignIn{
+        width:80%;
+        height:60vh;
+    }
+    .login_page .SignIn .bg_login{
+        height:60vh;
+    }
+    .login_page .input_login{
+        height:60vh;
+        padding-top: 10%;
+    }
+    .welcome_login{
+        font-size: 25px;
+    }
+    .wave{
+        font-size:12px;
+        width: 220px
+    }
+    .title_signIn{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        top:50%;
+        left: 0%;
+        transform: translate(5%, -50%);
+    }
+    .SignIn input{
+        width:250px;
+    }
+    .SignIn .input__login input{
+        padding:7px 0px 7px 10px;
+        outline: none;
+        font-size: 11px;
+    }
+    .input_login__sub{
+        display:none
+    }
+   
+}
+@media only screen and (min-width:411px) and (max-width:736px){
+   .input_login__sub{
+       width:100%;
+       height:70vh;
+   }
+   .input_login h1{
+    font-size:20px;
+}
+   .SignIn{
+       height:70vh;
+       width:80%;
+       position:fixed
+   }
+   .input_login{
+    width:100%;
+    padding-top:22%;
+    }
+    .input__login{
+    margin-top: 3px;
+    }
+   .SignIn input{
+    width:200px;
+    }
+    .SignIn .input__login input{
+    padding:7px 0px 7px 10px;
+    outline: none;
+    font-size: 11px;
+    }
+   .bg_login{
+       display:none;
+       width:0%;
+   }
+}

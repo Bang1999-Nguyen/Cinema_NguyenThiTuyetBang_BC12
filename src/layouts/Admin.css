@@ -1,0 +1,70 @@
+.header-admin{
+    -webkit-box-shadow: 0px 6px 17px 3px #898989; 
+box-shadow: 0px 6px 17px 3px #898989;
+}
+.header-admin{
+    height:68px;
+    max-height:68px;
+}
+.content-admin{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width:95%;
+    align-items: center;
+    margin-top:-4px;
+
+}
+.content-admin img{
+    width:80%;
+}
+.ant-layout .ant-layout-header{
+    height:0px;
+}
+.ant-layout .ant-layout-sider {
+    width:300px;
+    max-width: 300px;
+    min-width:300px;
+}
+element.style {
+    flex: 0 0 300px;
+    max-width: 300px;
+    width: 300px;
+}
+.ant-menu .ant-menu-item {
+    padding:10px 20px;
+}
+.header-admin .ant-layout .ant-layout-sider {
+    width:300px;
+    max-width: 300px;
+    min-width:300px;
+}
+.ant-layout-sider .ant-menu{
+    padding:20px 20px;
+}
+.ant-layout .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+    background-color: #6d7fcc;
+}
+.ant-layout-sider-children .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #6d7fcc;
+}
+.ant-layout .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background: transparent;
+}
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+    background: transparent;
+}
+.ant-form .ant-row .ant-form-item{
+    row-gap:100px;
+}
+.btn-add{
+    background:linear-gradient(120deg, #CC3366 20%, #663366 100%);  
+    border-radius:30px;
+}
+.btn_admin_name{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.admin_left{
+    -webkit-box-shadow: 11px 5px 15px 2px #9E9E9E; 
+box-shadow: 11px 5px 15px 2px #9E9E9E;
+}

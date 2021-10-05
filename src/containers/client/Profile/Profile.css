@@ -1,0 +1,139 @@
+.profile{
+    -webkit-box-shadow: -1px 1px 15px 9px #B0B0B0; 
+    box-shadow: -1px 1px 15px 9px #B0B0B0;
+background-color: white;
+border-radius: 30px;
+border:none
+}
+.history_booking span {
+    position: relative;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    display: inline-block; color: #4c268f;
+    margin:0 auto;
+  }
+  
+  /* We create a pseudo element and blur it using the SVG filter. We’ll grab the content from the custom HTML attribute. */
+  .history_booking span:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: attr(filter-content);
+    filter: url(#motion-blur-filter);
+  }
+  
+  /* We hide the SVG filter element from the DOM as it would take up some space */
+  
+  .history_booking svg {
+    display: none;
+  }
+  .profile_modal .ant-modal-content .ant-modal-close-x {
+    display: none;
+}
+.profile_modal 
+.ant-modal-content{
+  background-color: red;
+}
+.profile_header{
+  width: 40%;
+  height:100%
+}
+.profile_content{
+ width: 55%;
+  margin-left: 28% 
+}
+.infor_profile{
+ position: absolute;
+  top: 60%;
+   left: 3%;
+    background-color: white
+}
+.box-profile{
+  width: 750px;
+   max-width: 750px;
+    margin-bottom: 20px;
+     border-radius: 7px
+}
+.profile_modal{
+  height:1650px;
+}
+@media only screen and (min-width:768px) and (max-width:1024px){
+  .profile_header{
+    width: 100%;
+    height:100%;
+  }
+  .profile_modal{
+    height:2000px;
+    max-height:2000px;
+  }
+  .infor_profile{
+    width: 80%;
+    margin-left:25%;
+    background-color: white
+   }
+   .profile_content{
+    width: 100%;
+    
+     margin-left: 0% ;
+     margin-top:60%;
+     position: absolute;
+     top:50%;
+   }
+   .btn_profile{
+     margin-left:20px;
+     margin-top:10px;
+   }
+   .profile_modal .profile_page{
+     display:Flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
+   .box-profile{
+     margin-left:9px;
+   }
+}
+@media only screen and (min-width:411px) and (max-width:736px){
+  .profile_header{
+    width: 100%;
+    height:100%;
+  }
+  .profile_modal{
+    height:2000px;
+    max-height:2000px;
+  }
+  .infor_profile{
+    width: 80%;
+    margin-left:40px;
+    background-color: white
+   }
+   .box-profile{
+    width: 350px;
+     max-width: 350px;
+      margin-bottom: 20px;
+      margin:0 30px;
+       border-radius: 7px
+  }
+  .profile_content{
+    width: 100%;
+     margin-left: 0% ;
+     margin-top:60%;
+     position: absolute;
+     top:75%;
+   }
+   .btn_profile{
+     margin-left:20px;
+     margin-top:10px;
+   }
+   .profile_page{
+     display:Flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
+   .img-profile img{display:none;}
+}

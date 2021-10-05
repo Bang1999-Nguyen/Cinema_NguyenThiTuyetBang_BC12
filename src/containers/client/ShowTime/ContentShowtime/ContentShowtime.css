@@ -1,0 +1,555 @@
+.overlay-result{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height:1000px;
+    width:900px;
+    border:1px solid white;
+}
+
+
+.container-result{
+    width:85%;
+    position:absolute;
+    top:28%;
+    left:50%;
+    transform: translate(-50%, -50%);
+   min-height:1000px;
+    border:none;
+    border-radius:none;
+    background-color: white;
+}
+.span_4{
+    height:1300px;
+    border:none;
+    /* background: #0b0127;  
+    background: -webkit-linear-gradient(to right, #373B44, #0b0127);  
+    background: linear-gradient(to right, #373B44, #0b0127);  */
+    -webkit-box-shadow: 0px 3px 15px -3px #ccc; 
+    box-shadow: 0px 3px 15px -3px #ccc;
+    width:25%;
+    position:absolute;
+    top:74px;
+    right:0
+}
+.result-chair{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-result{
+    padding:30px 20px 20px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result-bg{
+    height:100vh;
+}
+.span_4 h3{
+    text-transform: uppercase;
+    padding:10px 0;
+}
+.span_4 p{
+    color:#ccc;
+    font-size:15px;
+}
+.chair h3{
+    color:#ccc;
+    font-size:18px;
+    letter-spacing: 0.03em;
+    font-weight:bold
+}
+.money h3{
+    color:#fff;
+    font-weight: bold;
+    font-size:18px;
+}
+.information-result h3{color:#ccc}
+.information-result h4{color:white}
+.btn-book{
+    padding:13px 25px;
+    color:white;
+    font-weight: bold;
+    border-radius:30px;
+    background:linear-gradient(80deg, #CC3366 0%, #663366 100%);  
+}
+.cover-bg{
+    height:60vh;
+    width:75%;
+    position:absolute;
+    left:0;
+    top:0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mask-image: -webkit-gradient(linear, left top, left bottom, 
+			color-stop(0.00,  rgba(0,0,0,1)),
+			color-stop(0.35,  rgba(0,0,0,1)),
+			color-stop(0.50,  rgba(0,0,0,1)),
+			color-stop(0.65,  rgba(0,0,0,1)),
+			color-stop(0.85,  rgba(0,0,0,0.6)),
+      color-stop(1.00,  rgba(0,0,0,0)));  
+}
+.trapezoid {
+    border-bottom: 60px solid rgba(255, 255, 0, 0.26);
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    height: 0;
+    width: 90%;
+    margin:30px auto;
+    filter: drop-shadow(3px 21px 21px #fff);
+-webkit-filter: drop-shadow(3px 21px 21px #fff);
+-moz-filter: drop-shadow(3px 21px 21px #fff);
+  }
+  .content-movie{
+    width:75%;
+    position:absolute;
+    left:0;
+    top:0; 
+    margin:0 auto;
+    margin-top: 20vh ;
+   height: 1000px
+   
+  }
+  .icon_showtime{
+    font-size:20px
+  }
+  .bar{
+      margin:0 auto;
+  }
+  .container-film{
+      width:80%;
+      margin:0 auto;
+      height:1200px;
+      border:none;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 3px 8px 8px #ccc; 
+      box-shadow: 0px 3px 8px 8px #ccc;
+  }
+  .span_8{
+    width:87%;
+  }
+  .span_4{
+    width:23%;
+  }
+  .custom{
+      height:50px;
+      width:100%;
+      background-color: rgb(88, 79, 79);
+      border-radius: 10px 10px 0 0;
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left:40px;
+  }
+.custom-screen{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+.ghe{
+    width:35px;
+    height:35px;
+    border-radius:5px;
+    cursor: pointer;
+    margin:15px;
+    background-color: gray;
+    color:white
+}
+.gheDaDat{
+    background-color: crimson!important;
+    color:white;
+    cursor: no-drop;
+    width:35px;
+    height:35px;
+    border-radius:5px;
+    cursor: pointer;
+    margin:15px;
+}
+.gheDangDat{
+    background-color: #33CC99!important;
+    box-shadow: rgba(255, 255, 255, 0.404) 2px 4px 4px;
+}
+.gheVip{
+    background-color: rgba(250, 140, 90, 0.925);
+    width:35px;
+    height:35px;
+    border-radius:5px;
+    cursor: pointer;
+    margin:15px;
+    color:white
+}
+.gheBanDat{
+    background-color: rgba(243, 19, 131, 0.925)!important;
+    width:35px;
+    height:35px;
+    border-radius:5px;
+    cursor: pointer;
+    margin:15px;
+    color:white;
+    box-shadow: rgba(255, 255, 255, 0.404) 2px 4px 4px;
+}
+.gheKhachDat{
+    background-color: rgba(16, 55, 180, 0.712);
+    cursor: no-drop;
+}
+.cookiesContent {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px 30px 70px;
+   
+  }
+  .cookiesContent button.close {
+    width: 30px;
+    font-size: 20px;
+    color: #c0c5cb;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+  }
+  .cookiesContent img {
+    width: 82px;
+    margin-bottom: 15px;
+  }
+  .cookiesContent p {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .cookiesContent button.accept {
+    background-color: #ed6755;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    padding: 14px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0px 6px 18px -5px #ed6755;
+  }
+  .img-result img{
+    width: 300px;
+    height: 350px;
+     margin: 0 auto
+  }
+  .title_film_showtime{
+    font-size: 25px
+  }
+  .btn-page{
+    padding:10px 30px;
+    font-size:16px 
+  }
+  .pg_previous{
+    font-size: 18px;
+    padding: 5px 15px
+  }
+  .pg_number{
+    padding: 6.5px 14px;
+
+  }
+  .number_content{
+    font-size: 16px
+  }
+  @media only screen and (min-width:768px) and (max-width:1024px){
+    .content-movie{
+        width:75%;
+        position:absolute;
+        left:0;
+        top:0; 
+        margin:0 auto;
+        margin-top:10vh;
+       
+      }
+      .notice_showtime{
+        display:none
+      }
+      .ghe{
+        width:30px;
+        height:30px;
+        border-radius:5px;
+        cursor: pointer;
+        margin:12px;
+        background-color: gray;
+        color:white
+    }
+    .gheDaDat{
+        background-color: crimson!important;
+        color:white;
+        cursor: no-drop;
+    }
+    .gheDangDat{
+        background-color: #33CC99!important;
+        box-shadow: rgba(255, 255, 255, 0.404) 2px 4px 4px;
+    }
+    .gheVip{
+        background-color: rgba(250, 140, 90, 0.925);
+        width:30px;
+        height:30px;
+        border-radius:5px;
+        cursor: pointer;
+        margin:12px;
+        color:white
+    }
+    .gheBanDat{
+        background-color: rgba(243, 19, 131, 0.925)!important;
+        width:30px;
+        height:30px;
+        border-radius:5px;
+        cursor: pointer;
+        margin:12px;
+        color:white;
+        box-shadow: rgba(255, 255, 255, 0.404) 2px 4px 4px;
+    }
+    .gheKhachDat{
+        background-color: rgba(44, 48, 63, 0.712);
+        cursor: no-drop;
+    }
+    .container-film{
+        width:90%;
+        margin:0 auto;
+        height:1200px;
+        border:none;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 3px 8px 8px #ccc; 
+        box-shadow: 0px 3px 8px 8px #ccc;
+    }
+    .img-result img{
+        width: 200px;
+        height: 200px;
+         margin: 0 auto
+      }
+      .title_film_showtime{
+        font-size: 18px
+      }
+      .section_person{
+          height:2500px;
+      }
+      .infor_result{
+          height:160px;
+          max-height:160px;
+      }
+      .place{
+          margin:-5px 0;
+      }
+      .btn-page{
+        padding:7px 20px;
+        font-size:13px 
+      }
+      .pg_previous{
+        font-size: 13px;
+        padding: 6.5px 15px
+      }
+      .pg_number{
+        padding: 5.5px 14px;
+    
+      }
+      .number_content{
+        font-size: 13px
+      }
+      .span_4 h3{
+        font-size:10px;
+      }
+      .span_4 p{
+        font-size:9px;
+      }
+      .btn-book{
+        font-size:10px;
+      }
+    
+}
+.circle{
+  font-size:20px;
+  margin-top:5px;
+}
+
+.icon-movie{
+  font-size:20px;
+}
+table thead{
+  font-size:18px;
+}
+table tbody{
+  font-size:15px;
+}
+
+@media only screen and (min-width:411px) and (max-width:736px){
+  .content-movie{
+      width:100%;
+      position:absolute;
+      left:0;
+      top:0; 
+      margin:0 auto;
+      margin-top:13vh;
+      height:800px
+    }
+    table thead{
+      font-size:12px;
+    }
+    
+    .container-film{
+      height:800px;
+    }
+    .span_8{
+      width:100%;
+      height:830px;
+    }
+    .chair_moive{
+      font-size:10px;
+    }
+    .span_4 h3{
+      font-size:12px;
+    }
+    .custom{
+      height:30px;
+    }
+    .span_4 p{
+      font-size:11px;
+    }
+    .btn-book{
+      font-size:11px;
+    }
+    .span_4{
+      margin-top:220%;
+      height:680px;
+      width:100%;
+    }
+    .ghe{
+      width:20px;
+      height:20px;
+      border-radius:5px;
+      cursor: pointer;
+      margin:7px;
+      background-color: gray;
+      color:white;
+      font-size:9px;
+  }
+  .gheDaDat{
+      background-color: crimson!important;
+      color:white;
+      cursor: no-drop;
+  }
+  .icon-movie{
+    font-size:12px;
+  }
+  .gheDangDat{
+      background-color: #33CC99!important;
+      box-shadow: rgba(255, 255, 255, 0.404) 2px 4px 4px;
+  }
+  .gheVip{
+      background-color: rgba(250, 140, 90, 0.925);
+      width:20px;
+      height:20px;
+      border-radius:5px;
+      cursor: pointer;
+      margin:7px;
+      color:white
+  }
+  .gheBanDat{
+      background-color: rgba(243, 19, 131, 0.925)!important;
+      width:20px;
+      height:20px;
+      border-radius:5px;
+      cursor: pointer;
+      margin:7px;
+      color:white;
+      box-shadow: rgba(255, 255, 255, 0.404) 2px 4px 4px;
+  }
+  .gheKhachDat{
+      background-color: rgba(44, 48, 63, 0.712);
+      cursor: no-drop;
+  }
+  .container-film{
+      width:90%;
+      margin:0 auto;
+      height:830px;
+      border:none;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 3px 8px 8px #ccc; 
+      box-shadow: 0px 3px 8px 8px #ccc;
+  }
+  .img-result img{
+      width: 200px;
+      height: 200px;
+       margin: 0 auto
+    }
+    .title_film_showtime{
+      font-size: 18px
+    }
+    .section_person{
+        height:2500px;
+    }
+    .infor_result{
+        height:160px;
+        max-height:160px;
+    }
+    .place{
+        margin:-5px 0;
+    }
+    .btn-page{
+      padding:7px 20px;
+      font-size:13px 
+    }
+    .pg_previous{
+      font-size: 13px;
+      padding: 6.5px 15px
+    }
+    .pg_number{
+      padding: 5.5px 14px;
+  
+    }
+    .number_content{
+      font-size: 13px
+    }
+    .showtime_book{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .trapezoid {
+      border-bottom: 40px solid rgba(255, 255, 0, 0.26);
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      height: 0;
+      width: 90%;
+      margin:30px auto;
+      filter: drop-shadow(3px 21px 21px #ccc4c4);
+      -webkit-filter: drop-shadow(3px 21px 21px #fff);
+      -moz-filter: drop-shadow(3px 21px 21px #fff);
+    }
+    .img-result{
+     display:none;
+    }
+    .icon_showtime{
+      font-size:10px
+    }
+    .circle{
+      font-size:14px;
+      margin-top:3px;
+    }
+    .trapezoid {
+      border-bottom: 60px solid rgba(255, 255, 0, 0.26);
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      height: 0;
+      width: 90%;
+      margin:15px auto;
+      filter: drop-shadow(3px 21px 21px #fff);
+      -webkit-filter: drop-shadow(3px 21px 21px #fff);
+      -moz-filter: drop-shadow(3px 21px 21px #fff);
+    }
+    table tbody{
+      font-size:12px;
+    }
+    .notice_showtime{
+      display:none
+    }
+} 
