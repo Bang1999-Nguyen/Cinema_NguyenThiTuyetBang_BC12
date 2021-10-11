@@ -16,14 +16,13 @@ export default function ContentShowtime(props) {
     const dispatch = useDispatch()
     const { isLoading } = useSelector(state => state.UserAction)
     const { Id } = props;
-    const waveSuccess = () => toast.success('Booking tickets successfully👋', { position: toast.POSITION.TOP_CENTER, autoClose: 3000 })
+    const waveSuccess = () => toast.success('Booking tickets successfully👋!', { position: toast.POSITION.TOP_CENTER, autoClose: 3000 })
     useEffect(() => {
         dispatch(actFetchShowtime(Id))
     }, []);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const showModal = () => {
         setIsModalVisible(true);
-        
     };
     const handleYes = () => {
             setIsModalVisible(false)
@@ -51,8 +50,8 @@ export default function ContentShowtime(props) {
     };
     const { listShowtime, loading, error, danhSachGheDangDat } = useSelector(state => state.ShowtimeFilmReducer)
     const { currentUser } = useSelector(state => state.authReducer)
-    if (loading) return <div className="loader" style={{ paddingTop: '10%', margin: '0 45%' }}>
-        <img src="https://gifimage.net/wp-content/uploads/2018/11/transparent-loading-gif-free-4.gif" style={{ width: '120px', height: '120px' }}></img>
+    if (loading) return <div className="loader_showtime" style={{ paddingTop: '10%', margin: '0 45%' }}>
+        <img src="https://gifimage.net/wp-content/uploads/2018/11/transparent-loading-gif-free-4.gif"></img>
     </div>
     return listShowtime && (
         <div>
@@ -105,7 +104,7 @@ export default function ContentShowtime(props) {
                             <br></br>
                             <br></br>
                             
-                            <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'80px', width:'80%', border:'1px solid white', margin:'0 auto', borderRadius:'6px'}} className="notice_showtime">
+                            <div style={{height:'80px', width:'80%', border:'1px solid white', margin:'0 auto', borderRadius:'6px'}} className="notice_showtime">
                               <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginLeft:'20px'}} >
                                   <button className="ghe">
                                   </button>

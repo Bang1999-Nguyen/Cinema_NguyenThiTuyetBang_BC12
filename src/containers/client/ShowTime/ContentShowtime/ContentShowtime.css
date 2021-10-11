@@ -258,6 +258,10 @@
   .number_content{
     font-size: 16px
   }
+  .loader_showtime img{
+    width:120px;
+    height:120px;
+  }
   @media only screen and (min-width:768px) and (max-width:1024px){
     .content-movie{
         width:75%;
@@ -363,7 +367,10 @@
       .btn-book{
         font-size:10px;
       }
-    
+      .loader_showtime img{
+        width:80px;
+        height:80px;
+      }
 }
 .circle{
   font-size:20px;
@@ -393,7 +400,10 @@ table tbody{
     table thead{
       font-size:12px;
     }
-    
+    .loader_showtime img{
+      width:40px;
+      height:40px;
+    }
     .container-film{
       height:800px;
     }
@@ -514,13 +524,13 @@ table tbody{
       align-items: center;
       flex-direction: column;
     }
-    .trapezoid {
-      border-bottom: 40px solid rgba(255, 255, 0, 0.26);
-      border-left: 30px solid transparent;
-      border-right: 30px solid transparent;
+    .container-film .trapezoid {
+      border-bottom: 30px solid rgba(255, 255, 0, 0.26);
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
       height: 0;
-      width: 90%;
-      margin:30px auto;
+      width: 95%;
+      margin:20px auto;
       filter: drop-shadow(3px 21px 21px #ccc4c4);
       -webkit-filter: drop-shadow(3px 21px 21px #fff);
       -moz-filter: drop-shadow(3px 21px 21px #fff);

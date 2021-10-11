@@ -96,10 +96,11 @@ export default function SignUp(props) {
                         </div>
                     </div>
                     <div className="input_login">
+                    <div className="movie_log">
                         <h1 className="text-center pt-8 pb-1" style={{ color: '#fff', fontSize: '28px', fontWeight: 'bold', letterSpacing: '1px' }}>
                             SI<span style={{ color: '#CC3366' }}>G</span>N UP
                         </h1>
-                        <span style={{color:'red', marginBottom:'10px'}}>{ errorSignUp}</span>
+                        {/* <span style={{color:'red', marginBottom:'10px'}}>{ errorSignUp}</span> */}
                         <Form
                             name="normal_login"
                             className="login-form"
@@ -188,7 +189,7 @@ export default function SignUp(props) {
                             </Form.Item>
                         </Form>
                     </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>

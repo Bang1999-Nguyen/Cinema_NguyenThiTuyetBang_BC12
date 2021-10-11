@@ -34,9 +34,9 @@ export default function Home() {
         <Event />
          {isVisible &&
             <div onClick={scrollToTop}>
-              <div className="arrow-container animated fadeInDown" style={{ position: 'fixed', top: '40%', right: '2%' }}>
+              <div className="arrow-container animated fadeInDown" style={{ position: 'fixed', top: '40%', right: '2%', zIdex:'999999999!important' }}>
                 <div className="arrow_up">
-                  <i className="fas fa-chevron-up" />
+                  <i className="fas fa-chevron-up"/>
                 </div>
                 <div className="arrow-1 animated hinge infinite zoomIn" />
               </div>

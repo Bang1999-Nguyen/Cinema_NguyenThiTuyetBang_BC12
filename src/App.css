@@ -35,6 +35,7 @@
   position: fixed;
   top:40%;
   right: 1%;
+  z-index:99999999!important
 }
 .arrow-1{
   width: 80px;
@@ -110,4 +111,52 @@
 .zoomIn {
   -webkit-animation-name: zoomIn;
           animation-name: zoomIn;
+}
+@media only screen and (min-width:411px) and (max-width:736px){
+  .arrow-container{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top:40%;
+    right: 1%;
+    z-index:99999999!important
+  }
+  .arrow-1{
+    width: 80px;
+    height: 80px;
+    background: #00BCD4;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .arrow_up{
+    width: 40px;
+    height: 40px;
+    background: #00BCD4;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    display: table;
+  }
+  .arrow_up:before{
+    width: 40px;
+    height: 40px;
+    content: "";
+    border: 2px solid #006064;
+    border-radius: 50%;
+    position: absolute;
+    top:2px;
+    left: 2px;
+    display:none
+  }
+  .arrow_up i{
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height:40px;
+    text-align: center;
+    color: #006064;
+  }
 }

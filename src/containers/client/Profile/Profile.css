@@ -61,6 +61,10 @@ border:none
 .profile_modal{
   height:1650px;
 }
+.shadow-inner, .history_btn{
+  padding: 15px 25px
+}
+
 @media only screen and (min-width:768px) and (max-width:1024px){
   .profile_header{
     width: 100%;
@@ -97,10 +101,18 @@ border:none
      margin-left:9px;
    }
 }
+.mobile_input{
+  width:400px;
+  padding: 8px 10px 8px 10px
+}
 @media only screen and (min-width:411px) and (max-width:736px){
   .profile_header{
     width: 100%;
     height:100%;
+  }
+  .mobile_input{
+    width:300px;
+    padding: 8px 10px 8px 10px
   }
   .profile_modal{
     height:2000px;
@@ -117,6 +129,10 @@ border:none
       margin-bottom: 20px;
       margin:0 30px;
        border-radius: 7px
+  }
+  .shadow-inner, .history_btn{
+    padding: 13px 18px;
+    font-size:13px;
   }
   .profile_content{
     width: 100%;

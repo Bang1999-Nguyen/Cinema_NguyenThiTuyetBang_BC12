@@ -10,20 +10,17 @@
     0 10px 10px rgba(0,0,0,0.22);
     width: 60%
 }
-.bg_login{
+.SignUp .bg_login{
     border-radius: 10px 0 0 10px;
     background:linear-gradient(120deg, #CC3366 20%, #663366 100%);  
     height:87vh;
 }
-.title_signIn{
+.SignUp .title_signIn{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    top:50%;
-    left: 0%;
-    transform: translate(8%, -50%);
+  
 }
 .title_signIn h1{
     color:'#fff'
@@ -48,7 +45,9 @@
     height:87vh;
 }
 .input_login{
-    height:87vh
+    width:60%;
+    height:87vh;
+    position: relative;
 }
 .welcome_login{
     font-size: 35px;
@@ -59,6 +58,11 @@
 }
 .input_login__sub{
     display:none
+}
+.movie_log{
+    position:absolute;
+    top:50%;
+    left: 50%;transform: translate(-50%, -50%);
 }
 @media only screen and (min-width:768px) and (max-width:1024px){
     .login_page .SignUp{

@@ -14,6 +14,27 @@ export default function MovieDetail(props) {
     const dispatch = useDispatch()
     const { currentUser } = useSelector(state => state.authReducer)
     const { movieId } = props.match.params
+    const [isOpen, setIsOpen] = useState({
+        isOpen: false,
+        trailer: ''
+    })
+    const showModalTrailer = (item) => {
+        setIsOpen({
+            isOpen: true,
+            trailer: item.trailer
+        })
+        setTimeout(() =>{
+            document.querySelector('.banner-img').classList.toggle('active')
+        }, 500)
+        
+    }
+    const hideModalTrailer = () => {
+        setIsOpen({
+            ...isOpen,
+            isOpen: false
+        })
+        document.querySelector('.banner-img').classList.remove('active')
+    }
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [state, setState] = useState(2);
     const [evaluate, setEvaluation] = useState('');
@@ -66,8 +87,8 @@ export default function MovieDetail(props) {
     }
     const { listMovieDetail, loading, listComment } = useSelector(state => state.DetailMovieReducer)
     if (loading) return <div style={{ height: '50vh', backgroundColor: 'white', width: '100%' }}>
-        <div className="loader" style={{ paddingTop: '10%', margin: '0 45%' }}>
-            <img src="https://gifimage.net/wp-content/uploads/2018/11/transparent-loading-gif-free-4.gif" style={{ width: '120px', height: '120px' }}></img>
+        <div className="loader_movie" style={{ paddingTop: '10%', margin: '0 45%' }}>
+            <img src="https://gifimage.net/wp-content/uploads/2018/11/transparent-loading-gif-free-4.gif"></img>
         </div>
     </div>
     const score = (listMovieDetail?.danhGia / 2)
@@ -75,40 +96,44 @@ export default function MovieDetail(props) {
         <div style={{ width: '100%', maxWidth: '100%', scrollMarginBottom: '0', position: 'relative' }} className="bg_detail_cinema">
             <div className="content_hero" style={{ backgroundImage: `url(${listMovieDetail?.hinhAnh})`, height: '500px', paddingTop: '50px', backgroundSize: 'cover', backgroundPosition: '100%', backgroundRepeat: 'no-repeat', position: 'relative', backgroundColor: 'black', width: '100%', maxWidth: '100%' }} >
                 <div className="icon-play">
-                    <img src="https://tix.vn/app/assets/img/icons/play-video.png" alt="" />
+                    <img src="https://tix.vn/app/assets/img/icons/play-video.png" alt="" nClick={() => showModalTrailer(listMovieDetail)}/>
                 </div>
             </div>
             <div className="bg-detail">
                 <div className="container-show">
                     <div className="banner-name">
                         <div className="banner-content">
-                            <h1 style={{ textAlign: 'left', fontWeight: 'bold' }}>ARE YOU READY TO BOOK TICKET?</h1>
-                            <h1 style={{ color: 'white', textAlign: 'left', textTransform: 'uppercase', fontWeight: 'bold', maxWidth: '500px' }} className="detail_title_movie">{listMovieDetail?.tenPhim}</h1>
-                            <p className="time_detail">Ngày khởi chiếu: {moment(listMovieDetail?.ngayKhoiChieu).format('DD.MM.YYYY')} </p>
-                            <div className="rate_page">
-                                <span>
-                                    <div className="single-chart">
-                                        <svg viewBox="0 0 36 36" className="circular-chart blue">
-                                            <path className="circle-bg"
-                                                d="M18 2.0845
+                            <div className="mobile_label">
+                                <div>
+                                    <h1 style={{ textAlign: 'left', fontWeight: 'bold' }}>ARE YOU READY TO BOOK TICKET?</h1>
+                                    <h1 style={{ color: 'white', textAlign: 'left', textTransform: 'uppercase', fontWeight: 'bold', maxWidth: '500px' }} className="detail_title_movie">{listMovieDetail?.tenPhim}</h1>
+                                    <p className="time_detail">Ngày khởi chiếu: {moment(listMovieDetail?.ngayKhoiChieu).format('DD.MM.YYYY')} </p>
+                                </div>
+                                <div className="rate_page">
+                                    <span>
+                                        <div className="single-chart">
+                                            <svg viewBox="0 0 36 36" className="circular-chart blue">
+                                                <path className="circle-bg"
+                                                    d="M18 2.0845
                                         a 15.9155 15.9155 0 0 1 0 31.831
                                  a 15.9155 15.9155 0 0 1 0 -31.831"
-                                            />
-                                            <path className="circle"
-                                                stroke-dasharray={`${listMovieDetail?.danhGia * 10}`, 100}
-                                                d="M18 2.0845
+                                                />
+                                                <path className="circle"
+                                                    stroke-dasharray={`${listMovieDetail?.danhGia * 10}`, 100}
+                                                    d="M18 2.0845
                                  a 15.9155 15.9155 0 0 1 0 31.831
                                     a 15.9155 15.9155 0 0 1 0 -31.831"
-                                            />
-                                            <text x="18" y="20.35" className="percentage">{listMovieDetail?.danhGia * 10}%</text>
-                                        </svg>
-                                    </div>
-                                    <div className="eval pl-5">
-                                        <h3 style={{ color: '#fff', textAlign: 'left', fontWeight: 'bold' }} className="danhGia_phim">EVALUATION</h3>
-                                        <h3 className="score_star"><Rate allowHalf defaultValue={score} /></h3>
-                                    </div>
-                                </span>
-                                <p className="w-trailer mt-9"><a style={{ color: 'white', fontWeight: 'bold', letterSpacing: '0.05em', }} className="watch_detail"><i class="fas fa-play"></i>WATCH TRAILER</a></p>
+                                                />
+                                                <text x="18" y="20.35" className="percentage">{listMovieDetail?.danhGia * 10}%</text>
+                                            </svg>
+                                        </div>
+                                        <div className="eval pl-5">
+                                            <h3 style={{ color: '#fff', textAlign: 'left', fontWeight: 'bold' }} className="danhGia_phim">EVALUATION</h3>
+                                            <h3 className="score_star"><Rate allowHalf defaultValue={score} /></h3>
+                                        </div>
+                                    </span>
+                                    <p className="w-trailer mt-9" onClick={() => showModalTrailer(listMovieDetail)}><a style={{ color: 'white', fontWeight: 'bold', letterSpacing: '0.05em', }} className="watch_detail"><i class="fas fa-play"></i>WATCH TRAILER</a></p>
+                                </div>
                             </div>
                         </div>
                         <div className="banner-img mt-20">
@@ -125,7 +150,7 @@ export default function MovieDetail(props) {
                     </div>
                 </div>
                 <div style={{ margin: '40% auto', backgroundColor: 'white', borderRadius: '10px', height: '930px', maxHeight: '930px', border: 'none', overflowY: 'scroll' }} className="box_movie">
-                    <Tabs tabPosition='top' >
+                    <Tabs tabPosition='top' className="desktop_time">
                         {
                             listMovieDetail.heThongRapChieu?.map((item, index) => {
                                 return (
@@ -174,6 +199,52 @@ export default function MovieDetail(props) {
                             })
                         }
                     </Tabs>
+                </div>
+                <div className="lg:hidden mobile_time" >
+                    {
+                        listMovieDetail.heThongRapChieu?.map((item, index) => {
+                            return (
+                                <li className="menu-item" aria-haspopup="true">
+
+                                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        <img src={item.logo} style={{ width: '50px', height: '50px' }}></img>
+                                        <a href="#0" className="ml-4">{item.tenHeThongRap}</a>
+                                    </div>
+                                    <ol className="sub-menu" aria-label="submenu">
+                                        {
+                                            item.cumRapChieu?.map((rap, index) => {
+                                                return (
+                                                    <li className="menu-item-sub" style={{ backgroundColor: '#211d2c' }}>
+                                                        <a href="#0" style={{ color: 'white' }}>{rap.tenCumRap}</a>
+                                                        <a href="#0" style={{ color: 'white' }}>{rap.diaChi}</a>
+                                                        <div className="grid grid-cols-4 gap-1 my-1">
+                                                            {
+                                                                rap.lichChieuPhim?.slice(0, 12).map((lich, index) => {
+                                                                    return (
+                                                                        <NavLink
+                                                                            to={`/checkOut/${lich.maLichChieu}`} onClick={() => {
+                                                                                window.scrollTo(0, 0)
+                                                                                dispatch({
+                                                                                    type: TRANSFER_PAGE
+                                                                                })
+                                                                            }} style={{ padding: '6px 14px', color: 'white', backgroundColor: 'black', fontSize: '13px', borderRadius: '5px' }}>
+                                                                            {moment(lich.ngayChieuGioChieu).format('hh:mm')}
+                                                                        </NavLink>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </div>
+
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ol>
+                                </li>
+                            )
+
+                        })
+                    }
                 </div>
             </div>
             <div style={{ width: '100%', borderBottom: '0.5px solid #d8d8d8', backgroundColor: 'white', marginTop: "20px" }} className="comment">
@@ -257,7 +328,18 @@ export default function MovieDetail(props) {
                         <div className="arrow-1 animated hinge infinite zoomIn" />
                     </div>
                 </div>}
-
+            {isOpen.isOpen ? (
+                <>
+                    <div className="opacity-100 fixed inset-0" style={{zIndex:'10000000000!important', backgroundColor:'rgba(0,0,0,0.6)'}}>
+                        <div style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -45%)', zIndex:'1000000000000!important'}} className="trailer_mobile">
+                        <iframe width="800" height="450" src={isOpen.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                       <div style={{position:'absolute', top:'14%', right:'17.5%'}}>
+                       <i class="far fa-times-circle" style={{color:'white', fontSize:'25px'}}  onClick={() => hideModalTrailer()}></i>
+                       </div>
+                    </div>
+                </>
+            ) : null}
         </div>
     )
 }

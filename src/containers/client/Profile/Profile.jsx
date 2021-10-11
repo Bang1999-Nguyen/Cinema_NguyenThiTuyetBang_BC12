@@ -115,18 +115,16 @@ export default function Profile(props) {
         const { name, value } = event.target;
     }
     const [isModalVisibleModal, setIsModalVisibleModal] = useState(false);
-    const showModalProfile = () => {
-        setIsModalVisibleModal(true);
-    };
+
     const handleOkProfile = () => {
         setIsModalVisibleModal(false);
     };
     const handleCancelProfile = () => {
         setIsModalVisibleModal(false);
     };
-    if (loading) return <div style={{ height: '50vh', backgroundColor: 'white', width: '100%' }}>
-        <div className="loader" style={{ paddingTop: '6%', margin: '0 45%' }}>
-            <img src="https://media.giphy.com/media/YMM6g7x45coCKdrDoj/giphy.gif" style={{ width: '100%', height: '180px' }}></img>
+    if (loading) return <div style={{ height: '95vh', backgroundColor: 'white', width: '100%', position:'relative'}}>
+        <div className="loader">
+            <img src="https://cdn.dribbble.com/users/722246/screenshots/4400319/loading_crescor_dribbble.gif" style={{ width: '600px', position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)',height:'600px' }}></img>
         </div>
     </div>
     return user ? listHistoryBooking && (
@@ -170,8 +168,8 @@ export default function Profile(props) {
                 </div>
                 {listHistoryBooking.thongTinDatVe?.length !== 0 ? <div className="profile_content">
                     <div style={{ display: 'flex', justifyContent: 'flex-start' }} className="btn_profile">
-                        <button style={{ margin: '17px 0', padding: '15px 25px', background: 'linear-gradient(80deg, #CC3366 0%, #663366 100%)', color: 'white', fontWeight: '600', borderRadius: '4px' }}>HISTORY BOOKING</button>
-                        <button style={{ margin: '17px 0', padding: '15px 25px', background: '#CFCFCF', color: 'black', fontWeight: '600', borderRadius: '4px', marginLeft: '20px' }} className="shadow-inner" onClick={showModal}>VIEW INFORMATION</button>
+                        <button style={{ margin: '17px 0', background: 'linear-gradient(80deg, #CC3366 0%, #663366 100%)', color: 'white', fontWeight: '600', borderRadius: '4px' }} className="history_btn">HISTORY BOOKING</button>
+                        <button style={{ margin: '17px 0', background: '#CFCFCF', color: 'black', fontWeight: '600', borderRadius: '4px', marginLeft: '20px' }} className="shadow-inner" onClick={showModal}>VIEW INFORMATION</button>
                     </div>
                     <div className="mt-4" >
                         {
@@ -225,22 +223,22 @@ export default function Profile(props) {
                     className="form_add"
                 >
                     <Form.Item style={{ margin: '13px 5%', width: '100%' }}>
-                        <Input style={{ width: '400px', textAlign: 'left', padding: '8px 10px 8px 10px', borderRadius: '5px' }} name='taiKhoan' onChange={formik.handleChange} value={formik.values.taiKhoan} />
+                        <Input style={{textAlign: 'left',  borderRadius: '5px' }} name='taiKhoan' onChange={formik.handleChange} value={formik.values.taiKhoan} className="mobile_input"/>
                     </Form.Item>
                     <Form.Item style={{ margin: '13px 5%', width: '100%' }}>
-                        <Input style={{ width: '400px', textAlign: 'left', padding: '8px 10px 8px 10px', borderRadius: '5px' }} name='hoTen' onChange={formik.handleChange} value={formik.values.hoTen} />
+                        <Input style={{ textAlign: 'left', borderRadius: '5px' }} name='hoTen' onChange={formik.handleChange} value={formik.values.hoTen}  className="mobile_input"/>
                     </Form.Item>
                     <Form.Item style={{ margin: '13px 5%', width: '100%' }}>
-                        <Input style={{ width: '400px', textAlign: 'left', padding: '8px 10xp 8px 10px', borderRadius: '5px' }} name='email' onChange={formik.handleChange} value={formik.values.email} />
+                        <Input style={{ textAlign: 'left', borderRadius: '5px' }} name='email' onChange={formik.handleChange} value={formik.values.email}  className="mobile_input"/>
                     </Form.Item>
                     <Form.Item style={{ margin: '13px 5%', width: '100%' }}>
-                        <Input style={{ width: '400px', textAlign: 'left', padding: '8px 10px 8px 10px', borderRadius: '5px' }} name='soDt' onChange={formik.handleChange} placeholder='Nhập số điện thoại' value={formik.values.soDt} />
+                        <Input style={{ textAlign: 'left', borderRadius: '5px' }} name='soDt' onChange={formik.handleChange} placeholder='Nhập số điện thoại' value={formik.values.soDt}  className="mobile_input"/>
                     </Form.Item>
                     <Form.Item style={{ margin: '13px 5%', width: '100%' }}>
                         <Input.Password
                             placeholder="input password"
                             iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-                            value={formik.values.matKhau} name='matKhau' onChange={formik.handleChange} style={{ width: '400px', textAlign: 'left', padding: '8px 10px 8px 10px', borderRadius: '5px', position:'relative' }} />
+                            value={formik.values.matKhau} name='matKhau' onChange={formik.handleChange} style={{textAlign: 'left', borderRadius: '5px', position:'relative' }}  className="mobile_input"/>
                     </Form.Item>
                     <Form.Item style={{ textAlign: 'left', display: 'flex' }}>
                         <button style={{ padding: '10px 25px', display: 'flex', marginLeft: '140px', border: 'none', fontSize: '15px', color: '#fff', textAlign: 'left', background: 'linear-gradient(80deg, #CC3366 0%, #663366 100%)' }} type="submit" key="submit" loading={loading} >Cập nhật thông tin</button>

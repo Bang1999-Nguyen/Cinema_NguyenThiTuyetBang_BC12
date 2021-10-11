@@ -18,6 +18,9 @@
      font-size: 30px
      
 }
+.logout_btn{
+    margin-top:-6px;
+}
 .name h3{
     font-size: 14px
 }
@@ -25,6 +28,11 @@
     position: absolute;
      top: 18px;
       left: 500px
+}
+.notice_showtime{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 @media only screen and (min-width:768px) and (max-width:1024px){
     .ant-tabs-tab-btn{
@@ -56,10 +64,14 @@
          top: 18px;
           left: 360px
     }
+    .notice_showtime{
+        display:none
+    }
 }
 .showtime_cinema{
     height:1500px;
 }
+
 @media only screen and (min-width:411px) and (max-width:736px){
     .ant-tabs-tab-btn{
         font-size:7px;
@@ -68,12 +80,13 @@
         font-size: 10px;
          position: absolute;
           top: 37px;
-           left: 220px;
+           left: 232px;
            color: #fff
       }
       .logout_btn{
         font-size: 10px;
         padding: 5px 14px;
+        margin-top:13px;
       
     }
     .name{
@@ -89,10 +102,13 @@
     }
     .count{
         position: absolute;
-         top: 25px;
-          left: 240px
+         top: 27px;
+          left: 260px
     }
     .name_book h3{
         display:none;
+    }
+    .notice_showtime{
+        display:none
     }
 }

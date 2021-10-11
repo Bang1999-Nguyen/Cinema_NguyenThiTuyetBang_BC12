@@ -17,9 +17,6 @@ import Paginate from './Paginate';
 import CountTime from '../CountTime/CountTime';
 const { TabPane } = Tabs;
 
-function callback(key) {
-    console.log(key);
-}
 export default function HeaderShowTime(props) {
     const { currentUser } = useSelector(state => state.authReducer)
     const [showModal, setShowModal] = useState(false);
@@ -52,7 +49,7 @@ export default function HeaderShowTime(props) {
                     Hello ! {currentUser.taiKhoan}
                 </h3>
 
-                <button style={{ color: '#fff', marginLeft: '30px', marginTop: '-6px', border: 'none', background: "linear-gradient(80deg, #CC3366 0%, #663366 100%)", borderRadius: '20px' }} onClick={() => {
+                <button style={{ color: '#fff', marginLeft: '30px', border: 'none', background: "linear-gradient(80deg, #CC3366 0%, #663366 100%)", borderRadius: '20px' }} onClick={() => {
                     setShowModal(true)
                 }} className="logout_btn">Log out</button>
             </div>
@@ -72,9 +69,6 @@ export default function HeaderShowTime(props) {
             history.push("/");
         }, 1800)
     }
-    // if (loading) return <div className="loader" style={{ paddingTop: '6%', margin: '0 45%' }}>
-    //     <img src="http://cdn.lowgif.com/full/bbd4dc3b1f8a454b-loading-gif-transparent-11-gif-images-download.gif" style={{ width: '140px', height: '140px' }}></img>
-    // </div>
     return (
         <div style={{backgroundColor: '#211d2c', position: 'relative', paddingTop: '30px', width: '100%' }} className="showtime_cinema">
             <div >
@@ -83,13 +77,12 @@ export default function HeaderShowTime(props) {
                         <TabPane tab={`CHỌN GHẾ VÀ THANH TOÁN`} key="1" style={{ marginTop: '50px'}}>
                             <ContentShowtime Id={Id} />
                         </TabPane>
-
                         <TabPane tab={`KẾT QUẢ ĐẶT VÉ`} key="2">
                             <section className="text-gray-600 body-font" className="section_person">
                                 <div className="container px-5 py-24 mx-auto">
                                     <div className="flex flex-col text-center w-full mb-20">
-                                        <h2 className="text-xl text-indigo-500 tracking-widest font-medium title-font mb-1">LỊCH SỬ ĐẶT VÉ KHÁCH HÀNG</h2>
-                                        <h1 className="sm:text-3xl text-2xl font-medium title-font text-white mt-4">Hãy xem thông tin đặt vé của bạn!</h1>
+                                        <h2 className="text-xl text-indigo-500 tracking-widest font-medium title-font mb-1">YOUR BOOKING</h2>
+                                        <h1 className="sm:text-3xl text-2xl font-medium title-font text-white mt-4">THANK YOU FOR YOUR PURCHASE!</h1>
                                     </div>
                                     <div className="flex flex-wrap -m-4">
                                         {

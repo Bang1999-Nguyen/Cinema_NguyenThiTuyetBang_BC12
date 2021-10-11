@@ -418,6 +418,9 @@ box-shadow: -2px 13px 15px 5px #949494;
     width:30px;
     height:30px;
  }
+ .showTime{
+	 display:flex
+ }
  .button_showtime, .button_showtime::after {
 	width: 250px;
 	height: 55px;
@@ -571,9 +574,7 @@ box-shadow: -2px 13px 15px 5px #949494;
 	border: none;
 	 border-radius: 5px; 
 }
-.clock_time{
-	margin-left:15px;
-}
+
 .time_list{
 	padding: 10px 7px;
 	background-color: #d8d8d8;
@@ -629,6 +630,11 @@ box-shadow: -2px 13px 15px 5px #949494;
 		padding: 20px 0 20px 0;
 		margin-bottom: 12px;
 	}
+	
+	.mobile_showtime{
+		display:none
+
+	}
 	.show_pagination{
 		color: #fff;
 		text-align: left;
@@ -683,7 +689,7 @@ box-shadow: -2px 13px 15px 5px #949494;
 	 color: #717171;
 	border-radius: 5px;
 	font-size:10px;
-	margin-left:20px;
+	
 	}
 	.result_page{
 		padding:6px 20px;
@@ -725,14 +731,18 @@ box-shadow: -2px 13px 15px 5px #949494;
 .infor_movie{
 	margin-left:10px;
 }
-.clock_time{
-	margin-left:-4px;
-}
+
 @media only screen and (min-width:411px) and (max-width:736px){
 	.showtime_label{
 		font-size:11px;
 		padding: 20px 0 20px 0;
 		margin-bottom: 10px;
+	}
+	.showTime{
+		display:none;
+	}
+	.showTime{
+		display:none;
 	}
 	.show_pagination{
 		color: #fff;
@@ -805,22 +815,60 @@ box-shadow: -2px 13px 15px 5px #949494;
 		margin-left:0px;
 	}
 	.previous_btn{
-		padding:3px 10px;
+		padding:3.5px 10px;
 		font-size:10px;
 	}
 	.next_btn{
-		padding:3px 10px;
+		padding:3.5px 10px;
 		font-size:10px;
 	}
 	.single_page{
-		padding: 0px 10px
+		padding: 0px 10px;
 	}
 	.name_page{
-		font-size:9px
+		font-size:10px
 	}
 	.page_movie{
-		height:1050px;
-		max-height:1050px;
+		height:1200px;
+		max-height:1200px;
+	}
+	.mobile_showtime{
+		width:99%;
+		margin:0 auto;
+		height:220px;
+		margin:15px 0;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 100%;
+		position:relative;
+		overflow:hidden;
+	
+	}
+	.mobile_bg{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		height:220px;
+		width:100%;
+		background-image: linear-gradient(to bottom,rgba(20,50,93,.75),rgba(8,22,48,.75));
+		max-height:220px;
+		transform: translateY(101%);
+		transition: all 0.5s ease;
+	}
+	.time-list-mobile{
+		padding:7px 8px;
+		background-color: black;
+		color:white;
+		font-size:9.5px;
+		border-radius:5px;
+	}
+	.mobile_showtime:hover .mobile_bg{
+		transform: translateY(0%);
+	}
+	.loader img{
+		width:40px;
+		height:40px;
 	}
 }
 

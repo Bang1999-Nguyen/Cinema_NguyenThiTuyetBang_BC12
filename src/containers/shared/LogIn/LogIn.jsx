@@ -10,6 +10,7 @@ import { Redirect, useHistory } from 'react-router';
 import Loader from '../../client/Loader/Loader';
 import { NavLink } from 'react-router-dom';
 import fire from '../../../Firebase/Firebase.js'
+import { Modal} from 'antd';
 // import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import app from '../../../Firebase/Firebase.js';
@@ -17,6 +18,7 @@ import {firebase} from '../../../Firebase/Firebase'
 import { LOGIN_SUCCESS, LOGIN_SUCCESS_GOOGLE } from './module/types';
 
 export default function LogIn(props) {
+    
     const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state
     const [user, setUser] = useState('')
     const dispatch = useDispatch()
@@ -32,7 +34,7 @@ export default function LogIn(props) {
                 payload:res
             })
           }).catch(err =>{
-              alert(err)
+           
           })
       }
       const handleLoginFacebook = () =>{
@@ -55,7 +57,7 @@ export default function LogIn(props) {
                         </div>
                     </div>
                     <div className="input_login">
-                        <div className="moive_log">
+                        <div className="movie_log">
                         <h1 className="text-center pt-8 pb-1" style={{ color: '#fff', fontWeight: 'bold', letterSpacing: '1px' }}>
                             SI<span style={{ color: '#CC3366' }}>G</span>N IN
                         </h1>
@@ -66,7 +68,7 @@ export default function LogIn(props) {
                             {/* <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} /> */}
                         </div>
                         <p style={{ color: '#fff', padding: '20px 0', fontSize: '16px', letterSpacing: '0.5px' }}>or use your account</p>
-                        <span style={{color:'red', marginBottom:'10px'}}>{error}</span>
+                        {/* <span style={{color:'red', marginBottom:'10px'}}>{error}</span> */}
                         <Form
                             name="normal_login"
                             className="login-form"
@@ -181,7 +183,7 @@ export default function LogIn(props) {
                         </div>
                     </div>
                 </div>
-            </div>      
+            </div>  
         </div>
     )
 }

@@ -1,5 +1,4 @@
 .SignIn{
-  
     position: absolute;
     top:50%;
     left:50%;
@@ -13,17 +12,28 @@
     border-radius: 10px 0 0 10px;
     background:linear-gradient(120deg, #CC3366 20%, #663366 100%);  
     height:87vh;
+    position: relative;
 }
 .title_signIn{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    top:50%;
-    left: 0%;
-    transform: translate(8%, -50%);
 }
+.Toastify__toast--warning {
+    background: #FFE8BC !important;
+  }
+.Toastify__toast--error {
+    background:  crimson !important;
+    color:white!important;
+    border:none
+  }
+.toastProgress {
+   display: none!important;
+  }
+  .Toastify__toast--error .Toastify__toast-icon{
+      width:0;
+  }
 .title_signIn h1{
     color:'#fff'
 }
@@ -44,11 +54,7 @@
 }
 .SignIn{
     width:60%;
-    height:87vh;
     position:fixed
-}
-.input_login{
-    height:87vh
 }
 .welcome_login{
     font-size: 35px;
@@ -60,15 +66,23 @@
 .input_login__sub{
     display:none
 }
+.title_signIn{
+    position:absolute;
+    top:50%;
+    left: 50%;transform: translate(-50%, -50%);
+}
 .input_login{
     width:60%;
-    
-}
-.input__login{
-    margin-top: 5px;
+    height:87vh;
+    position: relative;
 }
 .input_login h1{
     font-size:28px;
+}
+.movie_log{
+    position:absolute;
+    top:50%;
+    left: 50%;transform: translate(-50%, -50%);
 }
 @media only screen and (min-width:768px) and (max-width:1024px){
     .login_page .SignIn{
@@ -110,7 +124,6 @@
     .input_login__sub{
         display:none
     }
-   
 }
 @media only screen and (min-width:411px) and (max-width:736px){
    .input_login__sub{
@@ -118,30 +131,32 @@
        height:70vh;
    }
    .input_login h1{
-    font-size:20px;
-}
+        font-size:20px;
+    }
    .SignIn{
        height:70vh;
        width:80%;
-       position:fixed
+       position:absolute;
+       margin:0 auto;
    }
    .input_login{
-    width:100%;
-    padding-top:22%;
-    }
-    .input__login{
-    margin-top: 3px;
+        width:100%;
+        height:70vh;
+        position:absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -42%);
     }
    .SignIn input{
-    width:200px;
+        width:200px;
     }
     .SignIn .input__login input{
-    padding:7px 0px 7px 10px;
-    outline: none;
-    font-size: 11px;
+        padding:7px 0px 7px 10px;
+        outline: none;
+        font-size: 11px;
     }
    .bg_login{
        display:none;
        width:0%;
-   }
+   } 
 }

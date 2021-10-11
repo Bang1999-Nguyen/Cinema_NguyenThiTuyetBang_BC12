@@ -10,7 +10,7 @@ const initialState = {
   loading: false,
   error: '',
   button: [
-    { type: 'All', select: true, name: "ALL FILM" },
+    { type: 'All', select: true, name: "ALL MOVIES" },
     { type: 'isShowing', select: false, name: "NOW SHOWING" },
     { type: 'isComing', select: false, name: "COMING SOON" }
   ],

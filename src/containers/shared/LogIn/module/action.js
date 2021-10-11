@@ -20,7 +20,9 @@ const actLoginFail = error => ({
   type: LOGIN_FAIL,
   payload: error,
 });
-const wave = () => toast.success('Successfully Logged In 👋', { position: toast.POSITION.TOP_RIGHT, autoClose: 2500 })
+const wave = () => toast.success('Signed in successfully👋', { position: toast.POSITION.TOP_RIGHT, autoClose: 2500 })
+const waveFail = () => toast.error('Incorrect Password or Account', { position: toast.POSITION.TOP_CENTER, autoClose: 2500,backgroundColor: '#8329C5',
+color: '#ffffff'})
 export const actLogin = (user, history) => {
   return dispatch => {
     dispatch(actLoginRequest());
@@ -34,6 +36,7 @@ export const actLogin = (user, history) => {
       })
       .catch(error => {
         dispatch(actLoginFail('Unable to login!'));
+        waveFail()
       });
   };
 };
