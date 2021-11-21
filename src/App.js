@@ -24,20 +24,27 @@ function App() {
     );
   });
   return (
-    <div className="App" style={{ backgroundColor: 'rgba(0,0,0,0.9)'}}>
-      <Suspense fallback={<Loading />}>
-        <Router>
-          <Switch>
-            {renderLayout(clientRoutes, ClientLayout)}
-            <Route path='/logIn' component={LogIn} exact={true} />
-            <Route path='/checkOut/:Id' component={ShowTimeMovie} exact={true} />
-            <Route path='/register' component={SignUp} exact={true} />
-            {renderLayout(adminRoutes, AdminLayout)}
-            <Route path="*" component={PageNotFound} />
-          </Switch>
-        </Router>
-      </Suspense>
-    </div>
+      <div className="App" style={{ backgroundColor: 'rgba(0,0,0,0.9)' }}>
+        <div className="app-res">
+          <div className="app-responsive">
+          <img src="./images/stripy-73.png" style={{width:'350px', height:'350px'}}></img>
+            <h1>Website only supports Desktop, iPad and iPhone 8 Plus Service.</h1>
+        </div>
+          </div>
+           
+        <Suspense fallback={<Loading />}>
+          <Router>
+            <Switch>
+              {renderLayout(clientRoutes, ClientLayout)}
+              <Route path='/logIn' component={LogIn} exact={true} />
+              <Route path='/checkOut/:Id' component={ShowTimeMovie} exact={true} />
+              <Route path='/register' component={SignUp} exact={true} />
+              {renderLayout(adminRoutes, AdminLayout)}
+              <Route path="*" component={PageNotFound} />
+            </Switch>
+          </Router>
+        </Suspense>
+      </div>
   );
 }
 export default App;

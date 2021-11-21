@@ -37,11 +37,13 @@ export default function Header(props) {
             return <div>
                 <Link className="self-center px-8 py-3 rounded mr-2" to="/logIn" onClick={() => window.scrollTo(0, 0)} style={{ textDecoration: 'none', padding: "9px 22px", background: "transparent", borderRadius: '5%', color: 'white', fontSize: '14px', border: '0.5px solid white' }}>Sign In</Link>
                 <Link className="self-center px-0 py-3 rounded" to="/register" onClick={() => window.scrollTo(0, 0)} style={{ textDecoration: 'none', padding: "9px 22px", background: "linear-gradient(80deg, #CC3366 0%, #663366 100%)", borderRadius: '5%', color: 'white', fontSize: '14px' }}>Sign Up</Link>
+                <Link className="self-center px-0 py-3 rounded" to="/admin" style={{ textDecoration: 'none', fontSize: '15px', color:'white', marginLeft:'15px' }}>Admin</Link>
             </div>
         } else {
             return <div>
                 <Link className="account self-center px-4 py-3 rounded" to="/" style={{ borderRight: '1px solid gray', color: 'white' }}>Hello ! {currentUser.taiKhoan}</Link>
                 <a className="self-center px-0 py-3 rounded ml-3" onClick={showModal} style={{ textDecoration: 'none', padding: "9px 22px", background: "linear-gradient(80deg, #CC3366 0%, #663366 100%)", borderRadius: '5%', color: 'white', fontSize: '14px' }}>Log Out</a>
+                <Link className="self-center px-0 py-3 rounded" to="/admin" style={{ textDecoration: 'none', fontSize: '15px', color:'white', marginLeft:'15px' }}>Admin</Link>
             </div>
         }
     }
